@@ -20,9 +20,28 @@ header h1{
 }
 
 body{
-	background-color:#cce0d2;
+	background-color:#ddccff;
 }
 
+#cart{
+	position: absolute;
+	top:30px;
+	right:160px;
+	z-index: 2;
+}
+
+#money{
+	position: absolute;
+	top:0px;
+	right:0px;
+	padding:20px 15px 20px 15px;
+	background: #fdfdfdfd;
+	border:solid black;
+	border-radius:0px 0px 0px 25px;
+	color:#22aa22;
+	font-family: tahoma, arial;
+	font-weight:bold;
+}
 .purchase{
 	position: fixed;
 	right:3%;
@@ -35,11 +54,6 @@ body{
 	color:red;
 	font-family: arial;
 	font-weight:bold;
-}
-
-#money{
-	top:20%;
-	height:30px;
 }
 
 #cost{
@@ -141,4 +155,16 @@ body{
 .buy:hover{
 	cursor: pointer;
 	background-color: #f5a0a0;
+}
+
+main{
+	padding-bottom: 900px;
+}
+footer{
+	width:100%;
+	height:fit-content;
+	background: white;
+	text-align: center;
+	border-top:solid black;
+	font-family: arial;
 }

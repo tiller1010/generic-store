@@ -13,42 +13,51 @@
 		<h1>Generic Store</h1>
 	</header>
 
-	<div id=money class=purchase value='1000'>Funds: $1000</div>
+	<a href=""><img id='cart' src='cart.png'></a>
 
-	<div id=cost class=purchase>Cost: $0</div>
+	<div id=money value='1000'>Funds: $1000</div>
 
-	<div id=items class=purchase>Shopping Cart:<button id=buyBtn onclick="buy()">Buy</button></div>
+	<main>
+		<div id=cost class=purchase>Cost: $0</div>
 
-	<div class=content>
-	<div class=itemBox id=plant>
-		<div id=descBox class=1></div>
-		<button id=buy1 class=buy onclick="addItem(replicant)">Buy</button>
-	</div>
-	
-	<div class=itemBox id=shoe>
-		<div id=descBox class=2></div>
-		<button id=buy2 class=buy onclick="addItem(basilisk)">Buy</button>
-	</div>
-	
-	<div class=itemBox id=doorHandle>
-		<div id=descBox class=3></div>
-		<button id=buy3 class=buy onclick="addItem(bm42)">Buy</button>
-	</div>
-	
-	<div class=itemBox id=tv>
-		<div id=descBox class=4></div>
-		<button id=buy4 class=buy onclick="addItem(tachyon3)">Buy</button>
-	</div>
-	
-	<div class=itemBox id=fan>
-		<div id=descBox class=5></div>
-		<button id=buy5 class=buy onclick="addItem(alphabeast)">Buy</button>
-	</div>
-	
-	<div class=itemBox id=baseball>
-		<div id=descBox class=6></div>
-		<button id=buy6 class=buy onclick="addItem(arcangel)">Buy</button>
-	</div>
-	</div>
+		<div id=items class=purchase>Shopping Cart:<button id=buyBtn onclick="buy()">Buy</button></div>
+
+		<div class=content>
+		<div class=itemBox id=plant>
+			<div id=descBox class=1></div>
+			<button id=buy1 class=buy onclick="addItem()">Buy</button>
+		</div>
+		
+		<div class=itemBox id=shoe>
+			<div id=descBox class=2></div>
+			<button id=buy2 class=buy onclick="addItem()">Buy</button>
+		</div>
+		
+		<div class=itemBox id=doorHandle>
+			<div id=descBox class=3></div>
+			<button id=buy3 class=buy onclick="addItem()">Buy</button>
+		</div>
+		
+		<div class=itemBox id=tv>
+			<div id=descBox class=4></div>
+			<button id=buy4 class=buy onclick="addItem()">Buy</button>
+		</div>
+		
+		<div class=itemBox id=fan>
+			<div id=descBox class=5></div>
+			<button id=buy5 class=buy onclick="addItem()">Buy</button>
+		</div>
+		
+		<div class=itemBox id=baseball>
+			<div id=descBox class=6></div>
+			<button id=buy6 class=buy onclick="addItem()">Buy</button>
+		</div>
+		</div>
+	</main>
+	<footer>
+		<h5>Shopping Cart Icon made by CC 3.0 BY. from www.flaticon.com<br/>
+			Website by Tyler Trout 2018
+		</h5>
+	</footer>
 	</body>
 </html>
