@@ -1,0 +1,144 @@
+header{
+	position: absolute;
+	top:0px;
+	left:0px;
+	padding-left:40px; 
+	background:linear-gradient(#efccff 70%,#cd5cdd);
+	width: 100%;
+}
+header h2{
+	letter-spacing:3px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#cd5cdd;
+	text-shadow:2px 2px 2px #550088;
+}
+header h1{
+	font-size: 40px;
+	font-family: 'Paytone One', sans-serif;
+	color:#550088;
+	text-shadow: 2px 2px 2px white;
+}
+
+body{
+	background-color:#cce0d2;
+}
+
+.purchase{
+	position: fixed;
+	right:3%;
+	z-index:1;
+	border:solid black;
+	border-radius:25px;
+	padding:20px;
+	width:120px;
+	background-color: white;
+	color:red;
+	font-family: arial;
+	font-weight:bold;
+}
+
+#money{
+	top:20%;
+	height:30px;
+}
+
+#cost{
+	top:40%;
+	height:30px;
+	background-color: white;
+}
+
+#items{
+	top:60%;
+	width:170px;
+	background-color: white;
+}
+
+#items div{
+	width:fit-content;
+	border:solid black;
+	background-color:#c9c7c7;
+	border-radius:10px;
+	padding:5px;
+	margin:2px; 
+}
+
+#items div:hover{
+	cursor:pointer;
+	background-color: #f5a0a0;
+}
+
+#buyBtn{
+	position: relative;
+	left:5px;
+	padding:10px;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: #93af9b;
+	outline: none;
+}
+
+#buyBtn:hover{
+	cursor: pointer;
+	background-color: #1bef1b;
+}
+
+.content{
+	display:grid;
+	grid-template-columns:33% 33% 33%;
+	position: absolute;
+	top:170px;
+	left:1%;
+}
+
+.itemBox {
+	background-color:grey;
+	width:200px;
+	height:200px;
+	cursor: pointer;
+	padding:10px;
+	margin:40px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+
+.itemBox:hover{
+    background-color:#6fba6b;
+}
+
+#descBox{
+	display: none;
+	position:relative;
+	width:210px;
+	left:-10px;
+	top:210px;
+	text-align:center;
+	color:#d0e8ce;
+	border: solid green;
+	background-color: #344034;
+	border-width:3px;
+	font-family:sans-serif;
+	font-weight:bold;
+	padding:2px;
+}
+
+.buy{
+	display: none;
+	position: relative;
+	color:red;
+	background-color:#c9c7c7; 
+	width:70px;
+	padding:7px;
+	border-radius:20px;
+	font-size:20px;
+	font-weight:bold;
+	border-color:red;
+	top:195px;
+	left:160px;
+}
+
+.buy:hover{
+	cursor: pointer;
+	background-color: #f5a0a0;
+}

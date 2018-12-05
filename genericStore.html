@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Store</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="genericStore.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="genericStore.css">
+	</head>
+	<body>
+	<header class=header>
+		<h2>Welcome to</h2>
+		<h1>Generic Store</h1>
+	</header>
+
+	<div id=money class=purchase value='1000'>Funds: $1000</div>
+
+	<div id=cost class=purchase>Cost: $0</div>
+
+	<div id=items class=purchase>Shopping Cart:<button id=buyBtn onclick="buy()">Buy</button></div>
+
+	<div class=content>
+	<div class=itemBox id=plant>
+		<div id=descBox class=1></div>
+		<button id=buy1 class=buy onclick="addItem(replicant)">Buy</button>
+	</div>
+	
+	<div class=itemBox id=shoe>
+		<div id=descBox class=2></div>
+		<button id=buy2 class=buy onclick="addItem(basilisk)">Buy</button>
+	</div>
+	
+	<div class=itemBox id=doorHandle>
+		<div id=descBox class=3></div>
+		<button id=buy3 class=buy onclick="addItem(bm42)">Buy</button>
+	</div>
+	
+	<div class=itemBox id=tv>
+		<div id=descBox class=4></div>
+		<button id=buy4 class=buy onclick="addItem(tachyon3)">Buy</button>
+	</div>
+	
+	<div class=itemBox id=fan>
+		<div id=descBox class=5></div>
+		<button id=buy5 class=buy onclick="addItem(alphabeast)">Buy</button>
+	</div>
+	
+	<div class=itemBox id=baseball>
+		<div id=descBox class=6></div>
+		<button id=buy6 class=buy onclick="addItem(arcangel)">Buy</button>
+	</div>
+	</div>
+	</body>
+</html>
