@@ -142,8 +142,8 @@ body{
 	padding:2px;
 }
 
-.buy{
-	display: none;
+.buy{/*
+	display: none;*/
 	position: relative;
 	color:red;
 	background-color:#c9c7c7; 

@@ -93,14 +93,17 @@ function removeItem(item){
 }
 
 window.onload=function(){
+	$(function(){
+		$('.itemBox').click(function(){
+			$(this).children().slideToggle(300);
+			// $("#buy"+index).slideToggle(300);
+		});
+	});
+
 	if(document.getElementsByClassName('itemBox')){
 		for(i=0;i<items.length;i++){
 			let description=document.getElementById(items[i].title).firstElementChild;
 			description.innerHTML=items[i].title;
-			// $(function(){
-			// 	// $("#plant :first-child").slideToggle(300);
-			// 	// // $("#buy"+index).slideToggle(300);
-			// });
 		}
 	}
 
