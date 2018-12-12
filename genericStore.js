@@ -72,7 +72,7 @@
 // }
 try{
 	var cost=Number(sessionStorage.getItem("cost"));
-	var shoppingCart=Array(sessionStorage.getItem("shoppingCart"));
+	var shoppingCart=JSON.parse(sessionStorage.getItem("shoppingCart"));
 	if(!cost||!shoppingCart) throw "Cost and Shopping Cart now defined.";
 }
 catch(error){
@@ -96,7 +96,7 @@ function addItem(item){
 	cost+=Number(item.price);
 	sessionStorage.setItem("cost", cost);
 	shoppingCart.push(item);
-	sessionStorage.setItem("shoppingCart",shoppingCart);
+	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
 	console.log(cost);
 }
 
@@ -104,7 +104,7 @@ function removeItem(item){
 	cost-=Number(item.price);
 	sessionStorage.setItem("cost", cost);
 	shoppingCart.splice(shoppingCart.indexof(item),1);
-	sessionStorage.setItem("shoppingCart",shoppingCart);
+	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
 	document.getElementById("cost").innerHTML="Cost: $"+cost;
 
 }
