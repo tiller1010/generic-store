@@ -103,7 +103,7 @@ function addItem(item){
 function removeItem(item){
 	cost-=Number(item.price);
 	sessionStorage.setItem("cost", cost);
-	shoppingCart.splice(shoppingCart.indexof(item),1);
+	shoppingCart.splice(shoppingCart.indexOf(item),1);
 	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
 	document.getElementById("cost").innerHTML="Cost: $"+cost;
 
@@ -129,9 +129,10 @@ window.onload=function(){
 	if(checkoutIndicator){
 		document.getElementById("cost").innerHTML="Cost: $"+cost;
 		for(i=0; i<shoppingCart.length;i++){
-			let newListItem=$('<div>Remove: '+shoppingCart[i].title+'</div>');
+			let checkOutItem=shoppingCart[i];
+			let newListItem=$('<div>Remove: '+checkOutItem.title+'</div>');
 			$(newListItem).on('click',function(){
-				removeItem(shoppingCart[i]);
+				removeItem(checkOutItem);
 				$(this).remove();
 			});
 			$('#items').append(newListItem);
