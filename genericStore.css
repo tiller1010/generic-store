@@ -102,7 +102,7 @@ body{
 	background-color: #1bef1b;
 }
 
-.content{
+#content{
 	display:grid;
 	grid-template-columns:33% 33% 33%;
 	position: absolute;
