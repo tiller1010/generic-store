@@ -126,8 +126,8 @@ body{
     background-color:#6fba6b;
 }
 
-#descBox{
-	display: none;
+.descBox{
+	/*display: none;*/
 	position:relative;
 	width:210px;
 	left:-10px;
