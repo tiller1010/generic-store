@@ -70,6 +70,12 @@
 // 	}
 // 	else alert("Insufficient funds.");
 // }
+try{
+	var cost=Number(sessionStorage.getItem("cost"));
+}
+catch(e){
+	var cost=0;
+}
 
 let items=[];
 const item=function(title,summary,price){
@@ -84,19 +90,22 @@ const shoe=new item('shoe','A sports shoe','130');
 
 function addItem(item){
 	cost+=Number(item.price);
+	sessionStorage.setItem("cost", cost);
+	console.log(cost);
 }
 
 function removeItem(item){
 	cost-=Number(item.price);
+	sessionStorage.setItem("cost", cost);
 	document.getElementById("cost").innerHTML="Cost: $"+cost;
 
 }
 
 window.onload=function(){
+
 	$(function(){
 		$('.itemBox').click(function(){
 			$(this).children().slideToggle(300);
-			// $("#buy"+index).slideToggle(300);
 		});
 	});
 
@@ -110,7 +119,7 @@ window.onload=function(){
 	if(document.getElementById('items')){
 		document.getElementById("cost").innerHTML="Cost: $"+cost;
 		for(i=0; i<items.length;i++){
-			let newListItem=$('<div>Remove: '+items[i].name+'</div>');
+			let newListItem=$('<div>Remove: '+items[i].title+'</div>');
 			$(newListItem).on('click',function(){
 				removeItem(item);
 				$(this).remove();
