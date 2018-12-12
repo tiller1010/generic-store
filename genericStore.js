@@ -73,11 +73,14 @@
 try{
 	var cost=Number(sessionStorage.getItem("cost"));
 	var shoppingCart=JSON.parse(sessionStorage.getItem("shoppingCart"));
-	if(!cost||!shoppingCart) throw "Cost and Shopping Cart now defined.";
+	var funds=Number(sessionStorage.getItem("funds"));
+	if(!shoppingCart) throw "Cost, Cart, and Funds now defined.";
 }
 catch(error){
 	var cost=0;
 	var shoppingCart=[];
+	var funds=1000;
+	sessionStorage.setItem("funds",funds);
 	console.log(error);
 }
 
@@ -109,7 +112,26 @@ function removeItem(item){
 
 }
 
+function buy(){
+	if(cost<=funds){
+		funds=funds-cost;
+		cost=0;
+		document.getElementById('money').innerHTML="Funds: $"+funds;
+		document.getElementById('money').setAttribute('value',funds.toString());
+		document.getElementById('cost').innerHTML="Cost: $"+cost;
+		$('#items div').remove();
+		sessionStorage.setItem("cost", cost);
+		shoppingCart=[];
+		sessionStorage.setItem("funds",funds);
+		sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
+		alert("Thank you for your purchase!");
+	}
+	else alert("Insufficient funds.");
+}
+
 window.onload=function(){
+
+	document.getElementById('money').innerHTML="Funds: $"+funds;
 
 	$(function(){
 		$('.itemBox').click(function(){
