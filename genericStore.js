@@ -32,7 +32,6 @@ function addItem(item){
 	sessionStorage.setItem("cost", cost);
 	shoppingCart.push(item);
 	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
-	console.log(cost);
 }
 
 function removeItem(item){
@@ -72,6 +71,17 @@ window.onload=function(){
 				checkoutBuyBtn.style.visibility='hidden';
 			}
 			else checkoutBuyBtn.style.visibility=='visible';
+		}
+	},5);
+
+	const cartCountIcon=document.getElementById('cartCount');
+	setInterval(function(){
+		if(shoppingCart.length==0){
+			cartCountIcon.style.visibility='hidden';
+		}
+		else{
+			cartCountIcon.style.visibility='visible';
+			cartCountIcon.innerHTML=shoppingCart.length;
 		}
 	},5);
 
