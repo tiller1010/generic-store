@@ -23,14 +23,9 @@ body{
 	background-color:#ddccff;
 }
 
-#checkoutHeader{
-	position: relative;
-	top:100px;
-	
-}
 #cart{
 	position: absolute;
-	top:30px;
+	top:25px;
 	right:160px;
 	z-index: 2;
 }
@@ -47,56 +42,44 @@ body{
 	font-family: tahoma, arial;
 	font-weight:bold;
 }
-.purchase{
-	position: fixed;
-	right:3%;
-	z-index:1;
-	border:solid black;
-	border-radius:25px;
-	padding:20px;
-	width:120px;
+
+#checkout{
+	position: relative;
 	background-color: white;
-	color:red;
-	font-family: arial;
+	font-family: Tahoma, Geneva, sans-serif;
+	width:500px;
+	height:fit-content;
+	padding:5px 20px 20px 20px;
+	top:130px;
+	left:30%;
+}
+#cost{
+	position: absolute;
+	right:25px;
 	font-weight:bold;
 }
-
-#cost{
-	top:40%;
-	height:30px;
-	background-color: white;
-}
-
-#items{
-	top:60%;
-	width:170px;
-	background-color: white;
-}
-
 #items div{
 	width:fit-content;
 	border:solid black;
 	background-color:#c9c7c7;
 	border-radius:10px;
 	padding:5px;
-	margin:2px; 
+	margin:10px; 
 }
-
 #items div:hover{
 	cursor:pointer;
 	background-color: #f5a0a0;
 }
-
 #buyBtn{
-	position: relative;
-	left:5px;
-	padding:10px;
+	position: absolute;
+	right:25px;
+	bottom:25px;
+	padding:10px 40px 10px 40px;
 	border-radius: 10px;
 	font-weight: bold;
 	background-color: #93af9b;
 	outline: none;
 }
-
 #buyBtn:hover{
 	cursor: pointer;
 	background-color: #1bef1b;
@@ -123,7 +106,7 @@ body{
 }
 
 .itemBox:hover{
-    background-color:#6fba6b;
+    background-color:#6fbacc;
 }
 
 .descBox{
@@ -134,7 +117,7 @@ body{
 	top:210px;
 	text-align:center;
 	color:#d0e8ce;
-	border: solid green;
+	border:solid #337799;
 	background-color: #344034;
 	border-width:3px;
 	font-family:sans-serif;
@@ -145,21 +128,20 @@ body{
 .buy{/*
 	display: none;*/
 	position: relative;
-	color:red;
-	background-color:#c9c7c7; 
+	color:white;
+	background-color:#22bb66; 
 	width:70px;
 	padding:7px;
 	border-radius:20px;
 	font-size:20px;
 	font-weight:bold;
-	border-color:red;
 	top:195px;
 	left:160px;
 }
 
 .buy:hover{
 	cursor: pointer;
-	background-color: #f5a0a0;
+	background-color: #00ff00;
 }
 
 main{

@@ -12,15 +12,22 @@
 	<header class=header>
 		<a href='index.html'><h1>Generic Store</h1></a>
 	</header>
-	<h1 id='checkoutHeader'>Confirm your purchase:</h1>
 	<a href="checkout.html"><img id='cart' src='cart.png'></a>
 
-	<div id=money value='1000'>Funds: $1000</div>
+	<div id=money value='1000'></div>
 
-	<main>
-		<div id=cost class=purchase>Cost: $0</div>
+	<div id='checkout'>
+		<h1 id='checkoutHeader'>Confirm your purchase:</h1>
 
-		<div id=items class=purchase>Shopping Cart:<button id=buyBtn onclick="buy()">Buy</button></div>
+		<div id=cost></div>
+
+		<div id=items>Shopping Cart:<button id=buyBtn onclick="buy()">Buy</button></div>
+	</div>
 </main>
+	<footer>
+		<h5>Shopping Cart Icon made by CC 3.0 BY. from www.flaticon.com<br/>
+			Website by Tyler Trout 2018
+		</h5>
+	</footer>
 </body>
 </html>

@@ -21,7 +21,11 @@ const item=function(title,summary,price){
 }
 
 const plant=new item('Plant','A green fern','20');
-const shoe=new item('Shoe','A sports shoe','130');
+const shoe=new item('Shoe','A sports shoe','120');
+const blanket=new item('Blanket','A soft and warm blanket','23');
+const tv=new item('TV','An LCD flatscreen','180');
+const fan=new item('Fan','An electric powered fan','10');
+const baseball=new item('Baseball','A regulation size baseball','5');
 
 function addItem(item){
 	cost+=Number(item.price);
