@@ -65,6 +65,16 @@ window.onload=function(){
 
 	document.getElementById('money').innerHTML="Funds: $"+funds;
 
+	const checkoutBuyBtn=document.getElementById('buyBtn');
+	setInterval(function(){
+		if(checkoutBuyBtn){
+			if(shoppingCart.length==0){
+				checkoutBuyBtn.style.visibility='hidden';
+			}
+			else checkoutBuyBtn.style.visibility=='visible';
+		}
+	},5);
+
 	$(function(){
 		$('.itemBox').click(function(){
 			$(this).children().slideToggle(300);
