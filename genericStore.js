@@ -20,7 +20,7 @@ const item=function(title,summary,price){
 	items.push(this);
 }
 
-const plant=new item('Plant','A green fern','20');
+const plant=new item('Plant','A green cactus','20');
 const shoe=new item('Shoe','A sports shoe','120');
 const blanket=new item('Blanket','A soft and warm blanket','23');
 const tv=new item('TV','An LCD flatscreen','180');
@@ -95,7 +95,7 @@ window.onload=function(){
 	if(homePageIndicator){
 		for(i=0;i<items.length;i++){
 			let description=document.getElementById(items[i].title).firstElementChild;
-			description.innerHTML=items[i].title;
+			description.innerHTML=items[i].title+"<br/>"+items[i].summary+"<br/>$"+items[i].price;
 		}
 	}
 

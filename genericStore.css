@@ -125,7 +125,7 @@ body{
 }
 
 .descBox{
-	/*display: none;*/
+	display: none;
 	position:relative;
 	width:210px;
 	left:-10px;
@@ -140,8 +140,8 @@ body{
 	padding:2px;
 }
 
-.buy{/*
-	display: none;*/
+.buy{
+	display: none;
 	position: relative;
 	color:white;
 	background-color:#22bb66; 
@@ -169,4 +169,24 @@ footer{
 	text-align: center;
 	border-top:solid black;
 	font-family: arial;
+}
+
+/*Background Images*/
+#Plant{
+	background-image:url('images/plant.jpg');
+}
+#Shoe{
+	background-image:url('images/shoe.jpg');
+}
+#Blanket{
+	background-image:url('images/blanket.jpg');
+}
+#TV{
+	background-image:url('images/tv.jpg');
+}
+#Fan{
+	background-image:url('images/fan.jpg');
+}
+#Baseball{
+	background-image:url('images/baseball.jpg');
 }
