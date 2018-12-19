@@ -7,7 +7,7 @@ try{
 catch(error){
 	var cost=0;
 	var shoppingCart=[];
-	var funds=1000;
+	var funds=800;
 	sessionStorage.setItem("funds",funds);
 	console.log(error);
 }
@@ -48,7 +48,6 @@ function buy(){
 		funds=funds-cost;
 		cost=0;
 		document.getElementById('money').innerHTML="Funds: $"+funds;
-		document.getElementById('money').setAttribute('value',funds.toString());
 		document.getElementById('cost').innerHTML="Cost: $"+cost;
 		$('#items div').remove();
 		sessionStorage.setItem("cost", cost);
