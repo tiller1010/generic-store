@@ -2,7 +2,7 @@ header{
 	position: absolute;
 	top:0px;
 	left:0px;
-	padding-left:40px; 
+	text-indent: 40px;
 	background:linear-gradient(#efccff 70%,#cd5cdd);
 	width: 100%;
 }
@@ -173,9 +173,9 @@ footer{
 }
 
 /*Media Query for Mobile*/
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1050px){
 	header{
-		padding-left: 20px
+		text-indent: 20px
 	}
 	header h2{
 		font-size:20px;
@@ -185,23 +185,75 @@ footer{
 	}
 	#content{
 		top:100px;
-		display: block;
-	}
-	.itemBox{
-		margin:90px 60px 90px 60px;
+		grid-template-columns:300px 0;
 	}
 	main{
 		padding-bottom: 2200px;
 	}
 	#checkout{
-	width:350px;
-	left:20px;
+		margin:auto;
+		left:0;
+		width:330px;
 	}
 	#checkoutHeader{
 		font-size:23px;
 	}
 	footer{
 		font-size:13px;
+	}
+}
+
+@media only screen and (max-width:800px){
+	#content{
+		display: block;
+	}
+
+	.itemBox{
+		transform: translateX(19%);
+		margin:100px auto;
+	}
+
+	#money{
+		font-size: 12px;
+		font-weight: normal;
+		padding:8px;
+		width: 70px;
+		text-align: right;
+	}
+
+	#cart{
+		width:17px;
+		right:115px;
+	}
+
+	#cartCount{
+		width:9px;
+		height:9px;
+		font-size: 11px;
+		line-height: 8px;
+		right:100px;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	header h1{
+		font-size: 22px;
+	}
+
+	header h2{
+		font-size: 15px;
+	}
+
+	#checkout{
+		width:82%;
+	}
+	#checkout button{
+		padding:5px 9px 5px 9px;
+	}
+
+	.itemBox{
+		transform: translateX(8%);
+		margin-top:50px;
 	}
 }
 
