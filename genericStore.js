@@ -87,7 +87,7 @@ window.onload=function(){
 	//Adds the slide toggle feature to items and shows buy button
 	$(function(){
 		$('.itemBox').click(function(){
-			$(this).children().slideToggle(300);
+			$('#'+this.id+' > .descBox').slideToggle(300);
 			$('#'+this.id+' > button').toggle();
 		});
 	});
