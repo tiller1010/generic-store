@@ -1,3 +1,4 @@
+//If the session storage variables are not defined, define them
 try{
 	var cost=Number(sessionStorage.getItem("cost"));
 	var shoppingCart=JSON.parse(sessionStorage.getItem("shoppingCart"));
@@ -27,54 +28,77 @@ const tv=new item('TV','An LCD flatscreen','180');
 const fan=new item('Fan','An electric powered fan','10');
 const baseball=new item('Baseball','A regulation size baseball','5');
 
-function addItem(item){
-	cost+=Number(item.price);
-	sessionStorage.setItem("cost", cost);
-	shoppingCart.push(item);
-	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
-}
 
-function removeItem(item){
-	cost-=Number(item.price);
-	sessionStorage.setItem("cost", cost);
-	shoppingCart.splice(shoppingCart.indexOf(item),1);
-	sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
-	document.getElementById("cost").innerHTML="Cost: $"+cost;
-
-}
-
-function buy(){
-	if(cost<=funds){
-		funds=funds-cost;
-		cost=0;
-		document.getElementById('money').innerHTML="Funds: $"+funds;
-		document.getElementById('cost').innerHTML="Cost: $"+cost;
-		$('#items div').remove();
-		sessionStorage.setItem("cost", cost);
-		shoppingCart=[];
-		sessionStorage.setItem("funds",funds);
-		sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
-		alert("Thank you for your purchase!");
-	}
-	else alert("Insufficient funds.");
-}
 
 window.onload=function(){
-
+	
+	//Update funds and define elements that will be hidden or shown according to cart
 	document.getElementById('money').innerHTML="Funds: $"+funds;
-
+	const cartCountIcon=document.getElementById('cartCount');
 	const checkoutBuyBtn=document.getElementById('buyBtn');
-	setInterval(function(){
+	toggleCountIcon();
+	toggleBuyButton();
+
+	function addItem(item){
+		cost+=Number(item.price);
+		sessionStorage.setItem("cost", cost);
+		shoppingCart.push(item);
+		sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
+		toggleCountIcon();
+	}
+
+	//Click Event Listeners for buy buttons
+	$('#Plant > .buy').click(function(){addItem(plant)});
+	$('#Shoe > .buy').click(function(){addItem(shoe)});
+	$('#Blanket > .buy').click(function(){addItem(blanket)});
+	$('#TV > .buy').click(function(){addItem(tv)});
+	$('#Fan > .buy').click(function(){addItem(fan)});
+	$('#Baseball > .buy').click(function(){addItem(baseball)});
+	//And the final purchase buy button
+	$('#buyBtn').click(buy);
+
+
+	function removeItem(item){
+		cost-=Number(item.price);
+		sessionStorage.setItem("cost", cost);
+		shoppingCart.splice(shoppingCart.indexOf(item),1);
+		sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
+		document.getElementById("cost").innerHTML="Cost: $"+cost;
+		toggleCountIcon();
+		toggleBuyButton();
+	}
+
+	function buy(){
+		if(cost<=funds){
+			funds=funds-cost;
+			cost=0;
+			document.getElementById('money').innerHTML="Funds: $"+funds;
+			document.getElementById('cost').innerHTML="Cost: $"+cost;
+			$('#items div').remove();
+			sessionStorage.setItem("cost", cost);
+			shoppingCart=[];
+			sessionStorage.setItem("funds",funds);
+			sessionStorage.setItem("shoppingCart",JSON.stringify(shoppingCart));
+			toggleCountIcon();
+			toggleBuyButton();
+			alert("Thank you for your purchase!");
+		}
+		else alert("Insufficient funds.");
+	}
+
+	//Hide or show the buy button if the user has items
+	function toggleBuyButton(){
 		if(checkoutBuyBtn){
 			if(shoppingCart.length==0){
 				checkoutBuyBtn.style.visibility='hidden';
 			}
 			else checkoutBuyBtn.style.visibility=='visible';
 		}
-	},5);
+	}
 
-	const cartCountIcon=document.getElementById('cartCount');
-	setInterval(function(){
+
+	//Hide or show the shopping cart count icon if the user has items
+	function toggleCountIcon(){
 		if(shoppingCart.length==0){
 			cartCountIcon.style.visibility='hidden';
 		}
@@ -82,7 +106,7 @@ window.onload=function(){
 			cartCountIcon.style.visibility='visible';
 			cartCountIcon.innerHTML=shoppingCart.length;
 		}
-	},5);
+	}
 
 	//Adds the slide toggle feature to items and shows buy button
 	$(function(){
