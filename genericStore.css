@@ -189,7 +189,7 @@ footer{
 		grid-template-columns:300px 0;
 	}
 	main{
-		padding-bottom: 2200px;
+		padding-bottom: 2400px;
 	}
 	#checkout{
 		margin:auto;
@@ -211,7 +211,7 @@ footer{
 
 	.itemBox{
 		transform: translateX(19%);
-		margin:100px auto;
+		margin:118px auto;
 	}
 
 	#money{
