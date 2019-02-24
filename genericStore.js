@@ -120,7 +120,7 @@ window.onload=function(){
 	if(homePageIndicator){
 		for(i=0;i<items.length;i++){
 			let description=document.getElementById(items[i].title).firstElementChild;
-			description.innerHTML=items[i].title+"<br/>"+items[i].summary+"<br/>$"+items[i].price;
+			description.innerHTML="<span style='font-size:18px; color:#f7f;'>"+items[i].title+"</span><hr style='margin:2px'>"+items[i].summary+"<br/><span style='color:#7f7;'>$"+items[i].price+"</span>";
 		}
 	}
 
