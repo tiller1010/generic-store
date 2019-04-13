@@ -51,7 +51,8 @@ body{
 	position: absolute;
 	top:0px;
 	right:0px;
-	padding:20px 15px 20px 15px;
+	width:100px;
+	padding:20px 15px 20px 105px;
 	background: #fdfdfdfd;
 	border:solid black;
 	border-radius:0px 0px 0px 25px;
@@ -61,11 +62,10 @@ body{
 }
 
 #widgets{
-	position: sticky;
-	position: -ms-sticky;
-	position: -moz-sticky;
-	position: -webkit-sticky;
+	position: fixed;
 	top:0;
+	right:0;
+	z-index: 10;
 }
 
 #checkout{
@@ -226,8 +226,7 @@ footer{
 	#money{
 		font-size: 12px;
 		font-weight: normal;
-		padding:8px;
-		width: 70px;
+		padding-left: 40px;
 		text-align: right;
 	}
 
