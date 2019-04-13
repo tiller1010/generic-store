@@ -1,0 +1,8 @@
+@mixin sticky(){
+	position: sticky;
+	top:0;
+}
+
+#widgets{
+	@include sticky();
+}

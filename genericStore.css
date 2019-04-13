@@ -236,7 +236,7 @@ footer{
 	}
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 490px){
 	header h1{
 		font-size: 22px;
 	}
@@ -253,8 +253,14 @@ footer{
 	}
 
 	.itemBox{
-		transform: translateX(8%);
-		margin-top:50px;
+		margin:0;
+		transform: scale(.8);
+	}
+}
+
+@media only screen and (max-width: 490px){
+	.itemBox{
+		transform: scale(.7);
 	}
 }
 
